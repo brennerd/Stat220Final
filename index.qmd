@@ -1,0 +1,57 @@
+---
+title: ""
+subtitle: ""
+author: ""
+date: Jul 16, 2026
+format:
+  html:
+    toc: true
+    toc-location: left
+    code-fold: true
+    code-tools: true
+    theme: cosmo
+    fig-width: 8
+    fig-height: 5
+execute:
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+library(tidyverse)
+
+```
+
+## Introduction
+
+
+## Acquire
+
+
+```{r}
+#| label: acquire
+
+```
+
+## Wrangle
+
+
+```{r}
+#| label: wrangle
+
+```
+
+## Visualize
+
+
+```{r}
+#| label: visualize-1
+
+```
+
+## Communicate
+
+
+## Conclusion
+
