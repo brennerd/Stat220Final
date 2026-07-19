@@ -1,0 +1,265 @@
+id,date,effectiveDate,resolutionDate,typeCode,typeDesc,description,player_name,to_team,from_team
+888649,2026-03-01,2026-03-01,2026-03-01,ASG,Assigned,RF Natanael Yuten assigned to Boston Red Sox.,Natanael Yuten,Boston Red Sox,NA
+888840,2026-03-02,2026-03-02,2026-03-02,ASG,Assigned,3B Freili Encarnacion assigned to Boston Red Sox.,Freili Encarnacion,Boston Red Sox,NA
+888841,2026-03-02,2026-03-02,2026-03-02,ASG,Assigned,CF Enddy Azocar assigned to Boston Red Sox.,Enddy Azocar,Boston Red Sox,NA
+888805,2026-03-02,2026-03-02,2026-03-02,ASG,Assigned,SS Franklin Arias assigned to Boston Red Sox.,Franklin Arias,Boston Red Sox,NA
+888932,2026-03-03,2026-03-03,2026-03-03,ASG,Assigned,OF Andrews Opata assigned to Boston Red Sox.,Andrews Opata,Boston Red Sox,NA
+889170,2026-03-04,2026-03-04,2026-03-04,ASG,Assigned,OF Will Turner assigned to Boston Red Sox.,Will Turner,Boston Red Sox,NA
+889324,2026-03-05,2026-03-05,2026-03-05,ASG,Assigned,C Drew Ehrhard assigned to Boston Red Sox.,Drew Ehrhard,Boston Red Sox,NA
+889325,2026-03-05,2026-03-05,2026-03-05,ASG,Assigned,RF Miguel Bleis assigned to Boston Red Sox.,Miguel Bleis,Boston Red Sox,NA
+889349,2026-03-05,2026-03-05,2026-03-05,SC,Status Change,RF Miguel Bleis roster status changed by Boston Red Sox.,Miguel Bleis,Boston Red Sox,NA
+889350,2026-03-05,2026-03-05,2026-03-05,ASG,Assigned,LF Stanley Tucker assigned to Boston Red Sox.,Stanley Tucker,Boston Red Sox,NA
+890729,2026-03-06,2026-03-06,2026-03-06,ASG,Assigned,3B Yohander Linarez assigned to Boston Red Sox.,Yohander Linarez,Boston Red Sox,NA
+890725,2026-03-06,2026-03-06,2026-03-06,ASG,Assigned,RF Juan Chacon assigned to Boston Red Sox.,Juan Chacon,Boston Red Sox,NA
+890728,2026-03-06,2026-03-06,2026-03-06,ASG,Assigned,CF Justin Barry assigned to Boston Red Sox.,Justin Barry,Boston Red Sox,NA
+890726,2026-03-06,2026-03-06,2026-03-06,ASG,Assigned,2B Ahbram Liendo assigned to Boston Red Sox.,Ahbram Liendo,Boston Red Sox,NA
+890727,2026-03-06,2026-03-06,2026-03-06,ASG,Assigned,OF Anderson Fermin assigned to Boston Red Sox.,Anderson Fermin,Boston Red Sox,NA
+890935,2026-03-07,2026-03-07,2026-03-07,ASG,Assigned,3B D'Angelo Ortiz assigned to Boston Red Sox.,D'Angelo Ortiz,Boston Red Sox,NA
+890934,2026-03-07,2026-03-07,2026-03-07,ASG,Assigned,SS Efren Teran assigned to Boston Red Sox.,Efren Teran,Boston Red Sox,NA
+890933,2026-03-07,2026-03-07,2026-03-07,ASG,Assigned,1B Tyler Miller assigned to Boston Red Sox.,Tyler Miller,Boston Red Sox,NA
+890932,2026-03-07,2026-03-07,2026-03-07,ASG,Assigned,RHP Harry Blum assigned to Boston Red Sox.,Harry Blum,Boston Red Sox,NA
+891002,2026-03-08,2026-03-08,2026-03-08,ASG,Assigned,OF Yan Cruz assigned to Boston Red Sox.,Yan Cruz,Boston Red Sox,NA
+891195,2026-03-09,2026-03-09,2026-03-09,ASG,Assigned,3B Antonio Anderson assigned to Boston Red Sox.,Antonio Anderson,Boston Red Sox,NA
+891166,2026-03-09,2026-03-09,NA,OPT,Optioned,Boston Red Sox optioned LHP Jake Bennett to Worcester Red Sox.,Jake Bennett,Worcester Red Sox,Boston Red Sox
+891430,2026-03-12,2026-03-12,2026-03-12,SC,Status Change,Boston Red Sox placed 1B Romy Gonzalez on the 60-day injured list. Left shoulder surgery.,Romy Gonzalez,Boston Red Sox,NA
+891431,2026-03-13,2026-03-13,2026-03-13,SFA,Signed as Free Agent,Boston Red Sox signed free agent LHP Danny Coulombe.,Danny Coulombe,Boston Red Sox,NA
+893021,2026-03-16,2026-03-16,2026-03-16,SC,Status Change,2B Henry Godbout roster status changed by Boston Red Sox.,Henry Godbout,Boston Red Sox,NA
+891779,2026-03-16,2026-03-16,2026-03-16,ASG,Assigned,2B Henry Godbout assigned to Boston Red Sox.,Henry Godbout,Boston Red Sox,NA
+891866,2026-03-17,2026-03-17,2026-03-17,ASG,Assigned,C Hudson White assigned to Boston Red Sox.,Hudson White,Boston Red Sox,NA
+916019,2026-03-18,2026-03-18,2026-03-18,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Enmanuel Jimenez to a minor league contract.,Emanuel Jimenez,Boston Red Sox,NA
+892666,2026-03-18,2026-03-18,2026-03-18,SFA,Signed as Free Agent,Boston Red Sox signed free agent Santiago Yanes to a minor league contract.,Santiago Yanes,Boston Red Sox,NA
+892581,2026-03-18,2026-03-18,2026-03-18,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Emanuel Jimenez to a minor league contract.,NA,Boston Red Sox,NA
+892279,2026-03-19,2026-03-19,2026-03-19,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Tommy Kahnle to a minor league contract and invited him to spring training.,Tommy Kahnle,Boston Red Sox,NA
+892299,2026-03-19,2026-03-19,2026-03-19,SC,Status Change,3B Starlyn Nunez roster status changed by Boston Red Sox.,Starlyn Nunez,Boston Red Sox,NA
+892298,2026-03-19,2026-03-19,2026-03-19,ASG,Assigned,3B Starlyn Nunez assigned to Boston Red Sox.,Starlyn Nunez,Boston Red Sox,NA
+892288,2026-03-19,2026-03-19,NA,OPT,Optioned,Boston Red Sox optioned 1B Nick Sogard to Worcester Red Sox.,Nick Sogard,Worcester Red Sox,Boston Red Sox
+892289,2026-03-19,2026-03-19,NA,OPT,Optioned,Boston Red Sox optioned SS Tsung-Che Cheng to Worcester Red Sox.,Tsung-Che Cheng,Worcester Red Sox,Boston Red Sox
+892420,2026-03-20,2026-03-20,2026-03-20,ASG,Assigned,RHP Blake Wehunt assigned to Boston Red Sox.,Blake Wehunt,Boston Red Sox,NA
+892421,2026-03-20,2026-03-20,2026-03-20,ASG,Assigned,LHP Eduardo Rivera assigned to Boston Red Sox.,Eduardo Rivera,Boston Red Sox,NA
+892694,2026-03-21,2026-03-21,2026-03-21,ASG,Assigned,C Raudelis Martinez assigned to Boston Red Sox.,Raudelis Martinez,Boston Red Sox,NA
+892683,2026-03-21,2026-03-21,NA,OPT,Optioned,Boston Red Sox optioned 2B Kristian Campbell to Worcester Red Sox.,Kristian Campbell,Worcester Red Sox,Boston Red Sox
+923301,2026-03-22,2026-03-22,2026-03-22,SC,Status Change,Boston Red Sox placed RHP Kutter Crawford on the 15-day injured list. Right wrist surgery.,Kutter Crawford,Boston Red Sox,NA
+893020,2026-03-23,2026-03-23,2026-03-23,ASG,Assigned,SS Ilan Fernandez assigned to Boston Red Sox.,Ilan Fernandez,Boston Red Sox,NA
+893019,2026-03-23,2026-03-23,2026-03-23,ASG,Assigned,SS Jhorman Bravo assigned to Boston Red Sox.,Jhorman Bravo,Boston Red Sox,NA
+892957,2026-03-23,2026-03-23,NA,OPT,Optioned,Boston Red Sox optioned 2B Mickey Gasper to Worcester Red Sox.,Mickey Gasper,Worcester Red Sox,Boston Red Sox
+893133,2026-03-23,2026-03-23,NA,OPT,Optioned,Boston Red Sox optioned LHP Payton Tolle to Worcester Red Sox.,Payton Tolle,Worcester Red Sox,Boston Red Sox
+893131,2026-03-23,2026-03-23,NA,OPT,Optioned,Boston Red Sox optioned RHP Zack Kelly to Worcester Red Sox.,Zack Kelly,Worcester Red Sox,Boston Red Sox
+893132,2026-03-23,2026-03-23,NA,OPT,Optioned,Boston Red Sox optioned RHP Tyler Uberstine to Worcester Red Sox.,Tyler Uberstine,Worcester Red Sox,Boston Red Sox
+893017,2026-03-23,2026-03-23,NA,OPT,Optioned,Boston Red Sox optioned LHP Tyler Samaniego to Worcester Red Sox.,Tyler Samaniego,Worcester Red Sox,Boston Red Sox
+892958,2026-03-23,2026-03-23,NA,OPT,Optioned,Boston Red Sox optioned 3B Nate Eaton to Worcester Red Sox.,Nate Eaton,Worcester Red Sox,Boston Red Sox
+893529,2026-03-25,2026-03-22,2026-03-22,SC,Status Change,"Boston Red Sox placed LHP Patrick Sandoval on the 15-day injured list retroactive to March 22, 2026. Left UCL surgery recovery.",Patrick Sandoval,Boston Red Sox,NA
+893526,2026-03-25,2026-03-22,2026-03-22,SC,Status Change,"Boston Red Sox placed 1B Triston Casas on the 10-day injured list retroactive to March 22, 2026. Recovery from left patellar tendon repair.",Triston Casas,Boston Red Sox,NA
+893644,2026-03-25,2026-03-25,2026-03-25,NUM,Number Change,3B Caleb Durbin changed number to 5.,Caleb Durbin,Boston Red Sox,NA
+893528,2026-03-25,2026-03-22,2026-03-22,SC,Status Change,"Boston Red Sox placed 2B Anthony Seigler on the 10-day injured list retroactive to March 22, 2026. Left knee patellar tendinopathy.",Anthony Seigler,Boston Red Sox,NA
+893527,2026-03-25,2026-03-22,2026-03-22,SC,Status Change,"Boston Red Sox placed RHP Kutter Crawford on the 15-day injured list retroactive to March 22, 2026. Right wrist surgery.",Kutter Crawford,Boston Red Sox,NA
+895088,2026-03-26,2026-03-26,2026-03-26,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Cristian Alcantara to a minor league contract.,Cristian Alcantara,Boston Red Sox,NA
+894524,2026-03-27,2026-03-27,2026-03-27,SFA,Signed as Free Agent,Boston Red Sox signed free agent 2B Brendan Rodgers to a minor league contract.,Brendan Rodgers,Boston Red Sox,NA
+895996,2026-03-31,2026-03-31,NA,RTN,Returned,RHP Angel Bastardo returned to Boston Red Sox from Toronto Blue Jays.,NA,Boston Red Sox,Toronto Blue Jays
+895996,2026-03-31,2026-03-31,NA,RTN,Returned,RHP Angel Bastardo returned to Boston Red Sox from Toronto Blue Jays.,Angel Bastardo,Boston Red Sox,Toronto Blue Jays
+896880,2026-04-03,2026-04-03,2026-04-03,SC,Status Change,Boston Red Sox placed RHP Garrett Whitlock on the paternity list.,Garrett Whitlock,Boston Red Sox,NA
+896881,2026-04-03,2026-03-31,2026-03-31,SC,Status Change,"Boston Red Sox placed RHP Johan Oviedo on the 15-day injured list retroactive to March 31, 2026. Right elbow strain.",Johan Oviedo,Boston Red Sox,NA
+896883,2026-04-03,2026-04-03,NA,CU,Recalled,Boston Red Sox recalled RHP Tyler Uberstine from Worcester Red Sox.,Tyler Uberstine,Boston Red Sox,Worcester Red Sox
+896882,2026-04-03,2026-04-03,NA,CU,Recalled,Boston Red Sox recalled RHP Zack Kelly from Worcester Red Sox.,Zack Kelly,Boston Red Sox,Worcester Red Sox
+897143,2026-04-04,2026-04-04,NA,RTN,Returned,RHP Jedixson Paez returned to Boston Red Sox from Chicago White Sox.,Jedixson Paez,Boston Red Sox,Chicago White Sox
+897258,2026-04-05,2026-04-05,NA,TR,Trade,Boston Red Sox traded RHP Patrick Galle to St. Louis Cardinals.,Patrick Galle,St. Louis Cardinals,Boston Red Sox
+897309,2026-04-06,2026-04-06,2026-04-06,SC,Status Change,Boston Red Sox activated RHP Garrett Whitlock from the paternity list.,Garrett Whitlock,Boston Red Sox,NA
+897310,2026-04-06,2026-04-06,NA,OPT,Optioned,Boston Red Sox optioned RHP Tyler Uberstine to Worcester Red Sox.,Tyler Uberstine,Worcester Red Sox,Boston Red Sox
+897626,2026-04-07,2026-04-07,2026-04-07,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Maikel Vargas to a minor league contract.,Maikel Vargas,Boston Red Sox,NA
+897651,2026-04-07,2026-04-07,2026-04-07,SFA,Signed as Free Agent,Boston Red Sox signed free agent C Dilan Mata to a minor league contract.,Dilan Mata,Boston Red Sox,NA
+897578,2026-04-08,2026-04-08,2026-04-08,ASG,Assigned,Boston Red Sox sent LHP Patrick Sandoval on a rehab assignment to Worcester Red Sox.,Patrick Sandoval,Worcester Red Sox,Boston Red Sox
+897569,2026-04-08,2026-04-08,NA,CU,Recalled,Boston Red Sox recalled LHP Tyler Samaniego from Worcester Red Sox.,Tyler Samaniego,Boston Red Sox,Worcester Red Sox
+898069,2026-04-09,2026-04-09,2026-04-09,ASG,Assigned,Boston Red Sox sent 2B Anthony Seigler on a rehab assignment to Worcester Red Sox.,Anthony Seigler,Worcester Red Sox,Boston Red Sox
+898110,2026-04-10,2026-04-10,2026-04-10,SC,Status Change,Boston Red Sox activated 2B Anthony Seigler from the 10-day injured list.,Anthony Seigler,Boston Red Sox,NA
+898111,2026-04-10,2026-04-10,NA,OPT,Optioned,Boston Red Sox optioned 2B Anthony Seigler to Worcester Red Sox.,Anthony Seigler,Worcester Red Sox,Boston Red Sox
+898308,2026-04-11,2026-04-11,2026-04-11,ASG,Assigned,Boston Red Sox sent RHP Kutter Crawford on a rehab assignment to Worcester Red Sox.,Kutter Crawford,Worcester Red Sox,Boston Red Sox
+898865,2026-04-14,2026-04-14,2026-04-14,SC,Status Change,Boston Red Sox transferred RHP Johan Oviedo from the 15-day injured list to the 60-day injured list. Right elbow strain.,Johan Oviedo,Boston Red Sox,NA
+898863,2026-04-14,2026-04-14,NA,OPT,Optioned,Boston Red Sox optioned LHP Tyler Samaniego to Worcester Red Sox.,Tyler Samaniego,Worcester Red Sox,Boston Red Sox
+898864,2026-04-14,2026-04-14,NA,SE,Selected,Boston Red Sox selected the contract of RHP Jack Anderson from Worcester Red Sox.,Jack Anderson,Boston Red Sox,Worcester Red Sox
+899616,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,RF Roman Anthony changed number to 42.,Roman Anthony,Boston Red Sox,NA
+899618,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,RHP Greg Weissert changed number to 42.,Greg Weissert,Boston Red Sox,NA
+899619,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,LHP Aroldis Chapman changed number to 42.,Aroldis Chapman,Boston Red Sox,NA
+899620,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,LHP Jovani Morán changed number to 42.,Jovani Morán,Boston Red Sox,NA
+899621,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,RHP Jack Anderson changed number to 42.,Jack Anderson,Boston Red Sox,NA
+899624,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,SS Trevor Story changed number to 42.,Trevor Story,Boston Red Sox,NA
+899595,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,1B Willson Contreras changed number to 42.,Willson Contreras,Boston Red Sox,NA
+899597,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,RHP Brayan Bello changed number to 42.,Brayan Bello,Boston Red Sox,NA
+899598,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,RHP Sonny Gray changed number to 42.,Sonny Gray,Boston Red Sox,NA
+899600,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,LHP Ranger Suarez changed number to 42.,Ranger Suarez,Boston Red Sox,NA
+899601,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,LHP Connelly Early changed number to 42.,Connelly Early,Boston Red Sox,NA
+899602,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,LHP Danny Coulombe changed number to 42.,Danny Coulombe,Boston Red Sox,NA
+899617,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,3B Caleb Durbin changed number to 42.,Caleb Durbin,Boston Red Sox,NA
+899603,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,RHP Garrett Whitlock changed number to 42.,Garrett Whitlock,Boston Red Sox,NA
+899604,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,CF Ceddanne Rafaela changed number to 42.,Ceddanne Rafaela,Boston Red Sox,NA
+899605,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,C Carlos Narváez changed number to 42.,Carlos Narváez,Boston Red Sox,NA
+899606,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,RHP Ryan Watson changed number to 42.,Ryan Watson,Boston Red Sox,NA
+899607,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,C Connor Wong changed number to 42.,Connor Wong,Boston Red Sox,NA
+899608,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,LHP Garrett Crochet changed number to 42.,Garrett Crochet,Boston Red Sox,NA
+899609,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,SS Andruw Monasterio changed number to 42.,Andruw Monasterio,Boston Red Sox,NA
+899610,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,LF Masataka Yoshida changed number to 42.,Masataka Yoshida,Boston Red Sox,NA
+899611,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,SS Isiah Kiner-Falefa changed number to 42.,Isiah Kiner-Falefa,Boston Red Sox,NA
+899612,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,RF Wilyer Abreu changed number to 42.,Wilyer Abreu,Boston Red Sox,NA
+899613,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,RHP Zack Kelly changed number to 42.,Zack Kelly,Boston Red Sox,NA
+899614,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,3B Marcelo Mayer changed number to 42.,Marcelo Mayer,Boston Red Sox,NA
+899615,2026-04-15,2026-04-15,2026-04-15,NUM,Number Change,LF Jarren Duran changed number to 42.,Jarren Duran,Boston Red Sox,NA
+900526,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,LHP Ranger Suarez changed number to 55.,Ranger Suarez,Boston Red Sox,NA
+900527,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,C Carlos Narváez changed number to 75.,Carlos Narváez,Boston Red Sox,NA
+900528,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,CF Ceddanne Rafaela changed number to 3.,Ceddanne Rafaela,Boston Red Sox,NA
+900529,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,LHP Jovani Morán changed number to 47.,Jovani Morán,Boston Red Sox,NA
+900530,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,SS Andruw Monasterio changed number to 32.,Andruw Monasterio,Boston Red Sox,NA
+900531,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,SS Isiah Kiner-Falefa changed number to 2.,Isiah Kiner-Falefa,Boston Red Sox,NA
+900532,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,RHP Zack Kelly changed number to 76.,Zack Kelly,Boston Red Sox,NA
+900533,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,3B Marcelo Mayer changed number to 11.,Marcelo Mayer,Boston Red Sox,NA
+900534,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,LHP Connelly Early changed number to 71.,Connelly Early,Boston Red Sox,NA
+900535,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,3B Caleb Durbin changed number to 5.,Caleb Durbin,Boston Red Sox,NA
+900525,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,RHP Greg Weissert changed number to 57.,Greg Weissert,Boston Red Sox,NA
+900524,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,SS Trevor Story changed number to 10.,Trevor Story,Boston Red Sox,NA
+900523,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,RHP Ryan Watson changed number to 56.,Ryan Watson,Boston Red Sox,NA
+900522,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,RHP Garrett Whitlock changed number to 22.,Garrett Whitlock,Boston Red Sox,NA
+900541,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,1B Willson Contreras changed number to 40.,Willson Contreras,Boston Red Sox,NA
+900520,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,C Connor Wong changed number to 12.,Connor Wong,Boston Red Sox,NA
+900521,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,LF Masataka Yoshida changed number to 7.,Masataka Yoshida,Boston Red Sox,NA
+900536,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,RHP Sonny Gray changed number to 54.,Sonny Gray,Boston Red Sox,NA
+900537,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,LF Jarren Duran changed number to 16.,Jarren Duran,Boston Red Sox,NA
+900538,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,LHP Garrett Crochet changed number to 35.,Garrett Crochet,Boston Red Sox,NA
+900540,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,LHP Danny Coulombe changed number to 67.,Danny Coulombe,Boston Red Sox,NA
+900542,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,LHP Aroldis Chapman changed number to 44.,Aroldis Chapman,Boston Red Sox,NA
+900543,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,RHP Brayan Bello changed number to 66.,Brayan Bello,Boston Red Sox,NA
+900544,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,RF Roman Anthony changed number to 19.,Roman Anthony,Boston Red Sox,NA
+900545,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,RF Wilyer Abreu changed number to 52.,Wilyer Abreu,Boston Red Sox,NA
+900546,2026-04-16,2026-04-16,2026-04-16,NUM,Number Change,RHP Jack Anderson changed number to 77.,Jack Anderson,Boston Red Sox,NA
+901827,2026-04-18,2026-04-18,2026-04-18,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Pedro Meza to a minor league contract.,Pedro Meza,Boston Red Sox,NA
+901820,2026-04-18,2026-04-18,2026-04-18,SFA,Signed as Free Agent,Boston Red Sox signed free agent LHP Rinangel Mayora to a minor league contract.,Rinangel Mayora,Boston Red Sox,NA
+901993,2026-04-21,2026-04-21,2026-04-21,SC,Status Change,Boston Red Sox placed RHP Sonny Gray on the 15-day injured list. Right hamstring strain.,Sonny Gray,Boston Red Sox,NA
+901992,2026-04-21,2026-04-21,NA,CU,Recalled,Boston Red Sox recalled LHP Tyler Samaniego from Worcester Red Sox.,Tyler Samaniego,Boston Red Sox,Worcester Red Sox
+902245,2026-04-22,2026-04-22,2026-04-22,SC,Status Change,Boston Red Sox transferred 1B Triston Casas from the 10-day injured list to the 60-day injured list. Recovery from left patellar tendon repair.,Triston Casas,Boston Red Sox,NA
+902243,2026-04-22,2026-04-22,NA,SE,Selected,Boston Red Sox selected the contract of LHP Eduardo Rivera from Worcester Red Sox.,Eduardo Rivera,Boston Red Sox,Worcester Red Sox
+902244,2026-04-22,2026-04-22,NA,OPT,Optioned,Boston Red Sox optioned RHP Jack Anderson to Worcester Red Sox.,Jack Anderson,Worcester Red Sox,Boston Red Sox
+902492,2026-04-23,2026-04-23,NA,OPT,Optioned,Boston Red Sox optioned LHP Eduardo Rivera to Worcester Red Sox.,Eduardo Rivera,Worcester Red Sox,Boston Red Sox
+902491,2026-04-23,2026-04-23,NA,CU,Recalled,Boston Red Sox recalled LHP Payton Tolle from Worcester Red Sox.,Payton Tolle,Boston Red Sox,Worcester Red Sox
+904045,2026-04-29,2026-04-26,2026-04-26,SC,Status Change,"Boston Red Sox placed LHP Garrett Crochet on the 15-day injured list retroactive to April 26, 2026. Left shoulder inflammation.",Garrett Crochet,Boston Red Sox,NA
+904044,2026-04-29,2026-04-29,NA,CU,Recalled,Boston Red Sox recalled OF Nate Eaton from Worcester Red Sox.,Nate Eaton,Boston Red Sox,Worcester Red Sox
+904614,2026-04-30,2026-04-30,NA,OPT,Optioned,Boston Red Sox optioned OF Nate Eaton to Worcester Red Sox.,Nate Eaton,Worcester Red Sox,Boston Red Sox
+904850,2026-05-01,2026-05-01,NA,CU,Recalled,Boston Red Sox recalled LHP Jake Bennett from Worcester Red Sox.,Jake Bennett,Boston Red Sox,Worcester Red Sox
+905532,2026-05-03,2026-05-03,2026-05-03,ASG,Assigned,Boston Red Sox sent RHP Justin Slaten on a rehab assignment to Portland Sea Dogs.,Justin Slaten,Portland Sea Dogs,Boston Red Sox
+905676,2026-05-04,2026-05-02,2026-05-02,SC,Status Change,"Boston Red Sox placed LHP Danny Coulombe on the 15-day injured list retroactive to May 2, 2026. Cervical spasms.",Danny Coulombe,Boston Red Sox,NA
+905679,2026-05-04,2026-05-04,2026-05-04,SC,Status Change,Boston Red Sox placed LHP Patrick Sandoval on the 60-day injured list. Left UCL surgery recovery.,Patrick Sandoval,Boston Red Sox,NA
+905678,2026-05-04,2026-05-04,NA,SE,Selected,Boston Red Sox selected the contract of LHP Alec Gamboa from Worcester Red Sox.,Alec Gamboa,Boston Red Sox,Worcester Red Sox
+906236,2026-05-06,2026-05-06,2026-05-06,SC,Status Change,Boston Red Sox activated RHP Sonny Gray from the 15-day injured list.,Sonny Gray,Boston Red Sox,NA
+907217,2026-05-06,2026-05-06,2026-05-06,ASG,Assigned,Boston Red Sox sent RHP Justin Slaten on a rehab assignment to Worcester Red Sox.,Justin Slaten,Worcester Red Sox,Boston Red Sox
+906089,2026-05-06,2026-05-06,2026-05-06,ASG,Assigned,Boston Red Sox sent RHP Justin Slaten on a rehab assignment to Worcester Red Sox.,Justin Slaten,Worcester Red Sox,Boston Red Sox
+906237,2026-05-06,2026-05-06,NA,OPT,Optioned,Boston Red Sox optioned LHP Alec Gamboa to Worcester Red Sox.,Alec Gamboa,Worcester Red Sox,Boston Red Sox
+906711,2026-05-07,2026-05-05,2026-05-05,SC,Status Change,"Boston Red Sox placed LF Roman Anthony on the 10-day injured list retroactive to May 5, 2026. Right wrist sprain.",Roman Anthony,Boston Red Sox,NA
+906552,2026-05-07,2026-05-07,2026-05-07,SFA,Signed as Free Agent,Boston Red Sox signed free agent LHP Raymond Burgos to a minor league contract.,Raymond Burgos,Boston Red Sox,NA
+906713,2026-05-07,2026-05-07,NA,CU,Recalled,Boston Red Sox recalled C Mickey Gasper from Worcester Red Sox.,Mickey Gasper,Boston Red Sox,Worcester Red Sox
+906948,2026-05-08,2026-05-08,NA,CU,Recalled,Boston Red Sox recalled RHP Jack Anderson from Worcester Red Sox.,Jack Anderson,Boston Red Sox,Worcester Red Sox
+906949,2026-05-08,2026-05-08,NA,OPT,Optioned,Boston Red Sox optioned LHP Jake Bennett to Worcester Red Sox.,Jake Bennett,Worcester Red Sox,Boston Red Sox
+907218,2026-05-09,2026-05-09,2026-05-09,SC,Status Change,Boston Red Sox activated RHP Justin Slaten from the 15-day injured list.,Justin Slaten,Boston Red Sox,NA
+907422,2026-05-09,2026-05-09,2026-05-09,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Juan Verdus to a minor league contract.,Juan Verdus,Boston Red Sox,NA
+907417,2026-05-09,2026-05-09,2026-05-09,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Leonel Figuera to a minor league contract.,Leonel Figuera,Boston Red Sox,NA
+907216,2026-05-09,2026-05-09,NA,OPT,Optioned,Boston Red Sox optioned RHP Jack Anderson to Worcester Red Sox.,Jack Anderson,Worcester Red Sox,Boston Red Sox
+909328,2026-05-15,2026-05-15,2026-05-15,ASG,Assigned,Boston Red Sox sent LHP Danny Coulombe on a rehab assignment to Portland Sea Dogs.,Danny Coulombe,Portland Sea Dogs,Boston Red Sox
+909537,2026-05-16,2026-05-15,2026-05-15,SC,Status Change,"Boston Red Sox placed SS Trevor Story on the 10-day injured list retroactive to May 15, 2026. Sports hernia.",Trevor Story,Boston Red Sox,NA
+909536,2026-05-16,2026-05-16,NA,CU,Recalled,Boston Red Sox recalled 1B Nick Sogard from Worcester Red Sox.,Nick Sogard,Boston Red Sox,Worcester Red Sox
+910299,2026-05-19,2026-05-19,2026-05-19,ASG,Assigned,Boston Red Sox sent LHP Danny Coulombe on a rehab assignment to Worcester Red Sox.,Danny Coulombe,Worcester Red Sox,Boston Red Sox
+923302,2026-05-22,2026-05-22,2026-05-22,SC,Status Change,Boston Red Sox placed RHP Kutter Crawford on the 60-day injured list. Right wrist surgery.,Kutter Crawford,Boston Red Sox,NA
+910918,2026-05-22,2026-05-22,NA,OPT,Optioned,Boston Red Sox optioned RHP Zack Kelly to Worcester Red Sox.,Zack Kelly,Worcester Red Sox,Boston Red Sox
+910917,2026-05-22,2026-05-22,NA,SE,Selected,Boston Red Sox selected the contract of RHP Tayron Guerrero from Worcester Red Sox.,Tyron Guerrero,Boston Red Sox,Worcester Red Sox
+911321,2026-05-24,2026-05-24,2026-05-24,SC,Status Change,Boston Red Sox activated LHP Danny Coulombe from the 15-day injured list.,Danny Coulombe,Boston Red Sox,NA
+911320,2026-05-24,2026-05-24,NA,OPT,Optioned,Boston Red Sox optioned LHP Tyler Samaniego to Worcester Red Sox.,Tyler Samaniego,Worcester Red Sox,Boston Red Sox
+912495,2026-05-28,2026-05-25,2026-05-25,SC,Status Change,"Boston Red Sox placed RHP Garrett Whitlock on the 15-day injured list retroactive to May 25, 2026. Left knee inflammation.",Garrett Whitlock,Boston Red Sox,NA
+912494,2026-05-28,2026-05-28,NA,CU,Recalled,Boston Red Sox recalled LHP Tyler Samaniego from Worcester Red Sox.,Tyler Samaniego,Boston Red Sox,Worcester Red Sox
+915718,2026-06-03,2026-06-03,2026-06-03,SFA,Signed as Free Agent,Boston Red Sox signed free agent LHP Victor Aracena to a minor league contract.,Victor Aracena,Boston Red Sox,NA
+915500,2026-06-03,2026-05-31,2026-05-31,SC,Status Change,"Boston Red Sox placed 3B Nick Sogard on the 10-day injured list retroactive to May 31, 2026. Right oblique strain.",Nick Sogard,Boston Red Sox,NA
+915499,2026-06-03,2026-06-03,NA,CU,Recalled,Boston Red Sox recalled 2B Anthony Seigler from Worcester Red Sox.,Anthony Seigler,Boston Red Sox,Worcester Red Sox
+915733,2026-06-04,2026-06-04,2026-06-04,SC,Status Change,Boston Red Sox transferred SS Trevor Story from the 10-day injured list to the 60-day injured list. Sports hernia.,Trevor Story,Boston Red Sox,NA
+915732,2026-06-04,2026-06-04,NA,OPT,Optioned,Boston Red Sox optioned LHP Tyler Samaniego to Worcester Red Sox.,Tyler Samaniego,Worcester Red Sox,Boston Red Sox
+915957,2026-06-04,2026-06-04,NA,TR,Trade,Pittsburgh Pirates traded LHP Joe La Sorsa to Boston Red Sox.,Joe La Sorsa,Boston Red Sox,Pittsburgh Pirates
+915731,2026-06-04,2026-06-04,NA,SE,Selected,Boston Red Sox selected the contract of RHP Tommy Kahnle from Worcester Red Sox.,Tommy Kahnle,Boston Red Sox,Worcester Red Sox
+916070,2026-06-05,2026-06-05,2026-06-05,ASG,Assigned,Boston Red Sox sent LHP Patrick Sandoval on a rehab assignment to Worcester Red Sox.,Patrick Sandoval,Worcester Red Sox,Boston Red Sox
+916093,2026-06-05,2026-06-05,2026-06-05,SC,Status Change,Boston Red Sox transferred LHP Garrett Crochet from the 15-day injured list to the 60-day injured list. Left shoulder inflammation.,Garrett Crochet,Boston Red Sox,NA
+919529,2026-06-05,2026-06-05,2026-06-05,ASG,Assigned,Boston Red Sox sent LHP Patrick Sandoval on a rehab assignment to Worcester Red Sox.,Patrick Sandoval,Worcester Red Sox,Boston Red Sox
+916092,2026-06-05,2026-06-05,NA,OPT,Optioned,Boston Red Sox optioned RHP Brayan Bello to Worcester Red Sox.,Brayan Bello,Worcester Red Sox,Boston Red Sox
+916091,2026-06-05,2026-06-05,NA,SE,Selected,Boston Red Sox selected the contract of LHP Joe La Sorsa from Worcester Red Sox.,Joe La Sorsa,Boston Red Sox,Worcester Red Sox
+916378,2026-06-06,2026-06-05,2026-06-05,SC,Status Change,"Boston Red Sox placed LHP Jovani Morán on the 15-day injured list retroactive to June 5, 2026. Left elbow inflammation.",Jovani Morán,Boston Red Sox,NA
+916319,2026-06-06,2026-06-06,2026-06-06,ASG,Assigned,Boston Red Sox sent RHP Garrett Whitlock on a rehab assignment to Worcester Red Sox.,Garrett Whitlock,Worcester Red Sox,Boston Red Sox
+916379,2026-06-06,2026-06-06,NA,CU,Recalled,Boston Red Sox recalled LHP Alec Gamboa from Worcester Red Sox.,Alec Gamboa,Boston Red Sox,Worcester Red Sox
+916622,2026-06-08,2026-06-08,NA,OPT,Optioned,Boston Red Sox optioned LHP Joe La Sorsa to Worcester Red Sox.,Joe La Sorsa,Worcester Red Sox,Boston Red Sox
+916621,2026-06-08,2026-06-08,NA,CU,Recalled,Boston Red Sox recalled OF Nate Eaton from Worcester Red Sox.,Nate Eaton,Boston Red Sox,Worcester Red Sox
+917127,2026-06-08,2026-06-08,NA,ACQ,Acquired,Boston Red Sox acquired LHP Tyler Davis from the Washington Wild Things of the Frontier League.,Tyler Davis,Boston Red Sox,Washington Wild Things
+916888,2026-06-09,2026-06-09,2026-06-09,SC,Status Change,Boston Red Sox activated RHP Garrett Whitlock from the 15-day injured list.,Garrett Whitlock,Boston Red Sox,NA
+916887,2026-06-09,2026-06-09,NA,OPT,Optioned,Boston Red Sox optioned 2B Anthony Seigler to Worcester Red Sox.,Anthony Seigler,Worcester Red Sox,Boston Red Sox
+917169,2026-06-10,2026-06-10,NA,CU,Recalled,Boston Red Sox recalled LHP Jake Bennett from Worcester Red Sox.,Jake Bennett,Boston Red Sox,Worcester Red Sox
+917168,2026-06-10,2026-06-10,NA,OPT,Optioned,Boston Red Sox optioned LHP Alec Gamboa to Worcester Red Sox.,Alec Gamboa,Worcester Red Sox,Boston Red Sox
+921467,2026-06-16,2026-06-16,2026-06-16,ASG,Assigned,Boston Red Sox sent 1B Romy Gonzalez on a rehab assignment to Portland Sea Dogs.,Romy Gonzalez,Portland Sea Dogs,Boston Red Sox
+918973,2026-06-16,2026-06-16,2026-06-16,ASG,Assigned,Boston Red Sox sent 1B Romy Gonzalez on a rehab assignment to Portland Sea Dogs.,Romy Gonzalez,Portland Sea Dogs,Boston Red Sox
+919531,2026-06-17,2026-06-17,2026-06-17,ASG,Assigned,Boston Red Sox sent LHP Patrick Sandoval on a rehab assignment to Portland Sea Dogs.,Patrick Sandoval,Portland Sea Dogs,Boston Red Sox
+921465,2026-06-17,2026-06-17,2026-06-17,ASG,Assigned,Boston Red Sox sent LHP Patrick Sandoval on a rehab assignment to Portland Sea Dogs.,Patrick Sandoval,Portland Sea Dogs,Boston Red Sox
+920930,2026-06-20,2026-06-20,2026-06-20,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Pablo Serrano to a minor league contract.,Pablo Serrano,Boston Red Sox,NA
+920741,2026-06-20,2026-06-19,2026-06-19,SC,Status Change,"Boston Red Sox placed 2B Isiah Kiner-Falefa on the 10-day injured list retroactive to June 19, 2026. Left forearm inflammation.",Isiah Kiner-Falefa,Boston Red Sox,NA
+920740,2026-06-20,2026-06-20,NA,CU,Recalled,Boston Red Sox recalled 2B Anthony Seigler from Worcester Red Sox.,Anthony Seigler,Boston Red Sox,Worcester Red Sox
+921466,2026-06-23,2026-06-23,2026-06-23,ASG,Assigned,Boston Red Sox sent LHP Patrick Sandoval on a rehab assignment to Worcester Red Sox.,Patrick Sandoval,Worcester Red Sox,Boston Red Sox
+921468,2026-06-23,2026-06-23,2026-06-23,ASG,Assigned,Boston Red Sox sent 1B Romy Gonzalez on a rehab assignment to Worcester Red Sox.,Romy Gonzalez,Worcester Red Sox,Boston Red Sox
+921469,2026-06-23,2026-06-23,2026-06-23,SFA,Signed as Free Agent,Boston Red Sox signed free agent C Andrew Knizner to a minor league contract.,Andrew Knizner,Boston Red Sox,NA
+922222,2026-06-25,2026-06-25,2026-06-25,ASG,Assigned,Boston Red Sox sent LHP Jovani Morán on a rehab assignment to Worcester Red Sox.,Jovani Morán,Worcester Red Sox,Boston Red Sox
+922954,2026-06-26,2026-06-26,2026-06-26,SC,Status Change,Boston Red Sox placed 2B Marcelo Mayer on the 10-day injured list. Bone stress reaction to the left ulna.,Marcelo Mayer,Boston Red Sox,NA
+922953,2026-06-26,2026-06-26,NA,CU,Recalled,Boston Red Sox recalled SS Tsung-Che Cheng from Worcester Red Sox.,Tsung-Che Cheng,Boston Red Sox,Worcester Red Sox
+923280,2026-06-28,2026-06-28,2026-06-28,SC,Status Change,Boston Red Sox transferred LF Roman Anthony from the 10-day injured list to the 60-day injured list.,Roman Anthony,Boston Red Sox,NA
+925930,2026-06-28,2026-06-28,2026-06-28,SC,Status Change,Boston Red Sox activated DH Romy Gonzalez from the 60-day injured list.,Romy Gonzalez,Boston Red Sox,NA
+923276,2026-06-28,2026-06-28,2026-06-28,SC,Status Change,Boston Red Sox activated 1B Romy Gonzalez from the 60-day injured list.,Romy Gonzalez,Boston Red Sox,NA
+923278,2026-06-28,2026-06-28,NA,OPT,Optioned,Boston Red Sox optioned C Mickey Gasper to Worcester Red Sox.,Mickey Gasper,Worcester Red Sox,Boston Red Sox
+923944,2026-07-01,2026-07-01,2026-07-01,SC,Status Change,Boston Red Sox activated LHP Jovani Morán from the 15-day injured list.,Jovani Morán,Boston Red Sox,NA
+923945,2026-07-01,2026-07-01,2026-07-01,SC,Status Change,Boston Red Sox placed LHP Connelly Early on the 15-day injured list. Left elbow inflammation.,Connelly Early,Boston Red Sox,NA
+923937,2026-07-01,2026-07-01,2026-07-01,DES,Designated for Assignment,Boston Red Sox designated RHP Tommy Kahnle for assignment.,Tommy Kahnle,Boston Red Sox,NA
+923934,2026-07-01,2026-07-01,NA,TR,Trade,Athletics traded 3B Brett Harris to Boston Red Sox for RHP Ben Hansen.,Brett Harris,Boston Red Sox,Athletics
+923943,2026-07-01,2026-07-01,NA,CU,Recalled,Boston Red Sox recalled LHP Alec Gamboa from Worcester Red Sox.,Alec Gamboa,Boston Red Sox,Worcester Red Sox
+923934,2026-07-01,2026-07-01,NA,TR,Trade,Athletics traded 3B Brett Harris to Boston Red Sox for RHP Ben Hansen.,Ben Hansen,Athletics,Boston Red Sox
+924541,2026-07-02,2026-07-02,2026-07-02,ASG,Assigned,Boston Red Sox sent 3B Nick Sogard on a rehab assignment to Portland Sea Dogs.,Nick Sogard,Portland Sea Dogs,Boston Red Sox
+924613,2026-07-02,2026-07-02,2026-07-02,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Sam McWilliams to a minor league contract.,Sam McWilliams,Boston Red Sox,NA
+925624,2026-07-02,2026-07-02,2026-07-02,ASG,Assigned,Boston Red Sox sent 3B Nick Sogard on a rehab assignment to Portland Sea Dogs.,Nick Sogard,Portland Sea Dogs,Boston Red Sox
+924906,2026-07-03,2026-07-03,NA,OUT,Outrighted,Boston Red Sox sent RHP Tommy Kahnle outright to Worcester Red Sox.,Tommy Kahnle,Worcester Red Sox,Boston Red Sox
+924968,2026-07-04,2026-07-04,2026-07-04,ASG,Assigned,Boston Red Sox sent LHP Patrick Sandoval on a rehab assignment to Portland Sea Dogs.,Patrick Sandoval,Portland Sea Dogs,Boston Red Sox
+925414,2026-07-06,2026-07-06,2026-07-06,DES,Designated for Assignment,Boston Red Sox designated RHP Jack Anderson for assignment.,Jack Anderson,Boston Red Sox,NA
+925413,2026-07-06,2026-07-06,2026-07-06,SC,Status Change,Boston Red Sox activated LHP Patrick Sandoval from the 60-day injured list.,Patrick Sandoval,Boston Red Sox,NA
+925415,2026-07-06,2026-07-06,NA,OPT,Optioned,Boston Red Sox optioned LHP Alec Gamboa to Worcester Red Sox.,Alec Gamboa,Worcester Red Sox,Boston Red Sox
+925625,2026-07-07,2026-07-07,2026-07-07,ASG,Assigned,Boston Red Sox sent 3B Nick Sogard on a rehab assignment to Worcester Red Sox.,Nick Sogard,Worcester Red Sox,Boston Red Sox
+925784,2026-07-07,2026-07-07,2026-07-07,SC,Status Change,OF Nate Eaton roster status changed by Boston Red Sox.,Nate Eaton,Boston Red Sox,NA
+927104,2026-07-07,2026-07-07,2026-07-07,ASG,Assigned,Boston Red Sox sent 3B Nick Sogard on a rehab assignment to Worcester Red Sox.,Nick Sogard,Worcester Red Sox,Boston Red Sox
+926414,2026-07-09,2026-07-09,2026-07-09,SU,Suspension,1B Willson Contreras suspended.,Willson Contreras,Boston Red Sox,NA
+926296,2026-07-09,2026-07-09,2026-07-09,SC,Status Change,Boston Red Sox activated OF Nate Eaton.,Nate Eaton,Boston Red Sox,NA
+926369,2026-07-09,2026-07-06,2026-07-06,SC,Status Change,"Boston Red Sox placed LHP Ranger Suarez on the 15-day injured list retroactive to July 6, 2026. Left groin strain.",Ranger Suarez,Boston Red Sox,NA
+926368,2026-07-09,2026-07-09,NA,CU,Recalled,Boston Red Sox recalled 3B Brett Harris from Worcester Red Sox.,Brett Harris,Boston Red Sox,Worcester Red Sox
+926921,2026-07-11,2026-07-11,NA,CU,Recalled,Boston Red Sox recalled LHP Eduardo Rivera from Worcester Red Sox.,Eduardo Rivera,Boston Red Sox,Worcester Red Sox
+926947,2026-07-11,2026-07-11,NA,CLW,Claimed Off Waivers,Minnesota Twins claimed RHP Jack Anderson off waivers from Boston Red Sox.,Jack Anderson,Minnesota Twins,Boston Red Sox
+926922,2026-07-11,2026-07-11,NA,OPT,Optioned,Boston Red Sox optioned 3B Brett Harris to Worcester Red Sox.,Brett Harris,Worcester Red Sox,Boston Red Sox
+927103,2026-07-12,2026-07-12,2026-07-12,DES,Designated for Assignment,Boston Red Sox designated LHP Danny Coulombe for assignment.,Danny Coulombe,Boston Red Sox,NA
+927105,2026-07-12,2026-07-12,2026-07-12,SC,Status Change,Boston Red Sox activated 3B Nick Sogard from the 10-day injured list.,Nick Sogard,Boston Red Sox,NA
+927106,2026-07-12,2026-07-12,NA,OPT,Optioned,Boston Red Sox optioned 3B Nick Sogard to Worcester Red Sox.,Nick Sogard,Worcester Red Sox,Boston Red Sox
+927102,2026-07-12,2026-07-12,NA,CU,Recalled,Boston Red Sox recalled RHP Brayan Bello from Worcester Red Sox.,Brayan Bello,Boston Red Sox,Worcester Red Sox
+927542,2026-07-13,2026-07-13,2026-07-13,SFA,Signed as Free Agent,Boston Red Sox signed free agent RHP Tommy Kahnle to a minor league contract.,Tommy Kahnle,Boston Red Sox,NA
+927802,2026-07-14,2026-07-14,2026-07-14,SC,Status Change,OF Jahmai Jones roster status changed by Boston Red Sox.,Jahmai Jones,Boston Red Sox,NA
+927475,2026-07-14,2026-07-14,NA,TR,Trade,Detroit Tigers traded OF Jahmai Jones to Boston Red Sox for Player To Be Named Later.,NA,Detroit Tigers,Boston Red Sox
+927476,2026-07-14,2026-07-14,NA,OPT,Optioned,Boston Red Sox optioned OF Nate Eaton to Worcester Red Sox.,Nate Eaton,Worcester Red Sox,Boston Red Sox
+927475,2026-07-14,2026-07-14,NA,TR,Trade,Detroit Tigers traded OF Jahmai Jones to Boston Red Sox for Player To Be Named Later.,Jahmai Jones,Boston Red Sox,Detroit Tigers
+928185,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed RHP Kaleb LaFavor.,Kaleb LaFavor,Boston Red Sox,NA
+928179,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed LHP Kide Adetuyi.,Kide Adetuyi,Boston Red Sox,NA
+928107,2026-07-17,2026-07-17,2026-07-17,SC,Status Change,Boston Red Sox activated OF Jahmai Jones.,Jahmai Jones,Boston Red Sox,NA
+928196,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed SS Colton Coates.,Colton Coates,Boston Red Sox,NA
+928169,2026-07-17,2026-07-17,2026-07-17,SFA,Signed as Free Agent,Boston Red Sox signed free agent LHP Carson Revay to a minor league contract.,Carson Revay,Boston Red Sox,NA
+928200,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed RHP Luis Calderon.,Luis Calderon,Boston Red Sox,NA
+928168,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed SS Jake Schaffner.,Jake Schaffner,Boston Red Sox,NA
+928189,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed SS Jacob Webster.,Jacob Webster,Boston Red Sox,NA
+928194,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed RHP Jase Evangelista.,Jase Evangelista,Boston Red Sox,NA
+928198,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed RHP Alex Kranzler.,Alex Kranzler,Boston Red Sox,NA
+928183,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed OF Martin Shelar.,Martin Shelar,Boston Red Sox,NA
+928181,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed LHP Josh Volmerding.,Josh Volmerding,Boston Red Sox,NA
+928106,2026-07-17,2026-07-17,2026-07-17,SC,Status Change,Boston Red Sox activated OF Jahmai Jones.,Jahmai Jones,Boston Red Sox,NA
+928187,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed SS Wills Maginnis.,Wills Maginnis,Boston Red Sox,NA
+928177,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed LHP Brett Lanman.,Brett Lanman,Boston Red Sox,NA
+928192,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed RHP Mason Lei.,Mason Lei,Boston Red Sox,NA
+928171,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed OF Owen Hull.,Owen Hull,Boston Red Sox,NA
+928173,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed SS Jace Mataczynski.,Jace Mataczynski,Boston Red Sox,NA
+928175,2026-07-17,2026-07-17,2026-07-17,SGN,Signed,Boston Red Sox signed RHP Lucas Davenport.,Lucas Davenport,Boston Red Sox,NA
+928262,2026-07-17,2026-07-17,2026-07-17,SC,Status Change,Boston Red Sox activated 1B Willson Contreras.,Willson Contreras,Boston Red Sox,NA
+928073,2026-07-17,2026-07-17,NA,CU,Recalled,Boston Red Sox recalled LHP Alec Gamboa from Worcester Red Sox.,Alec Gamboa,Boston Red Sox,Worcester Red Sox
+928724,2026-07-18,2026-07-18,2026-07-18,REL,Released,Boston Red Sox released LHP Danny Coulombe.,Danny Coulombe,Boston Red Sox,NA
+928601,2026-07-18,2026-07-18,NA,OPT,Optioned,Boston Red Sox optioned LHP Alec Gamboa to Worcester Red Sox.,Alec Gamboa,Worcester Red Sox,Boston Red Sox

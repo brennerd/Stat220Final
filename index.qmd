@@ -20,7 +20,8 @@ execute:
 ```{r}
 #| label: setup
 library(tidyverse)
-
+library(baseballr)
+library(jsonlite)
 ```
 
 ## Introduction
@@ -32,6 +33,61 @@ library(tidyverse)
 ```{r}
 #| label: acquire
 
+season_year  <- 2026
+season_start <- "2026-03-01"
+today_date <- "2026-07-20"
+streak_start_date <- as.Date("2026-07-03")
+
+# ---- Source 1a: Baseball-Reference team game log --------------------------
+
+# All Red Sox game outcomes from 2026. One row for date, win/loss, starting pitcher, attendance, etc. 
+
+bos_games <- bref_team_results(Tm = "BOS", year = season_year)
+write_csv(bos_games, "data/raw/bos_team_results_2026.csv")
+
+# ---- Source 1b: Baseball-Reference player stats log --------------------------
+
+#In-depth Red-Sox player stats divided by before streak vs after streak.
+
+#Boston batting stats before streak
+before_batters <- bref_daily_batter(t1 = season_start, t2 = as.character(streak_start_date - 1)) |>
+  filter(Team == "Boston")
+write_csv(before_batters, "data/raw/bos_batters_before_2026.csv")
+
+#Boston batting stats during streak
+streak_batters <- bref_daily_batter(t1 = streak_start_date, t2 = today_date) |>
+  filter(Team == "Boston")
+write_csv(streak_batters, "data/raw/bos_batters_streak_2026.csv")
+
+#Boston pitching stats before streak
+before_pitchers <- bref_daily_pitcher(t1 = season_start, t2 = as.character(streak_start_date - 1)) |>
+  filter(Team == "Boston")
+write_csv(before_pitchers, "data/raw/bos_pitchers_before_2026.csv")
+
+#Boston pitching stats after streak
+streak_pitchers <- bref_daily_pitcher(t1 = as.character(streak_start_date), t2 = today_date) |>
+  filter(Team == "Boston")
+write_csv(streak_pitchers, "data/raw/bos_pitchers_streak_2026.csv")
+
+# ---- Source 2: Official MLB transaction data using API call --------------------------
+
+url <- paste0(
+  "https://statsapi.mlb.com/api/v1/transactions?teamId=111",
+  "&startDate=", season_start,
+  "&endDate=", today_date
+)
+
+result <- fromJSON(url)
+
+bos_transactions <- result$transactions %>% 
+  mutate(
+    player_name = person$fullName,
+    to_team = toTeam$name,
+    from_team = fromTeam$name
+  ) %>% 
+  select(-person, -toTeam, -fromTeam)
+
+write_csv(bos_transactions, "data/raw/bos_transactions_2026.csv")
 ```
 
 ## Wrangle
