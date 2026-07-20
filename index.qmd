@@ -1,7 +1,7 @@
 ---
-title: ""
+title: "What Makes a Team Hot : Investigating the Red Sox 13 Game Win Streak"
 subtitle: ""
-author: ""
+author: "Dashiell Brenner"
 date: Jul 16, 2026
 format:
   html:
@@ -29,7 +29,7 @@ library(plotly)
 
 Baseball is often described as "a game of runs," and perhaps no team in the history of the sport has better encapsulated this saying than the 2026 Boston Red Sox. On July 2nd, with their record reading (37-48) and their playoff odds projected at a bleak 9%, fans across Boston were ready to write off the 2026 season as just another disappointment. And then, seemingly overnight, everything changed. Between July 3rd and July 19th the Red Sox ripped off 13 consecutive wins, a feat which has been accomplished fewer than one-hundred times in MLB history. In the span of about 2-weeks the Red Sox went from a team in the basement of the American League to one of the hottest teams in baseball, with their playoff odds rocketing to above 50%.
 
-A momentum shift this dramatic naturally elicited a variety of questions among baseball analysts. Was this simply a lucky streak, the kind of variance any team can run into over a two-week stretch, or had something substantive changed? Were Red Sox hitters suddenly squaring up the ball with more authority? Had the pitching staff turned a real corner? Which players were most responsible for the dramatic turnaround? This report sets out to answer these questions with data rather than speculation, by comparing Red Sox hitting, pitching metrics from earlier in the season against the period since the win streak began on July 3rd. Along with exploring whether any roster transactions could help explain the shift in the trajectory of the season. 
+A momentum shift this dramatic naturally elicited a variety of questions among baseball analysts. Was this simply a lucky streak, the kind of variance any team can run into over a two-week stretch, or had something substantive changed? Were Red Sox hitters suddenly squaring up the ball with more authority? Had the pitching staff turned a real corner? Which players were most responsible for the dramatic turnaround? Were any specific roster additions responsible for the sudden change? This report sets out to answer these questions with data rather than speculation, by comparing Red Sox hitting and pitching metrics from earlier in the season against the period since the win streak began on July 3rd. Along with exploring whether any roster transactions could help explain the shift in the trajectory of the season. 
 
 ## Acquisition
 
@@ -203,20 +203,24 @@ batters_both <- bos_batters_compare %>%
   ungroup() %>% 
   filter(!(Name %in% c("Nate Eaton","Anthony Seigler", "Romy Gonzalez" ))) #not enough ABs during or before streak
 
-ops_order <- batters_both %>% 
+#ops changes by batter
+ops_change <- batters_both %>% 
   select(Name, period, OPS) %>% 
   pivot_wider(names_from = period, values_from = OPS) %>% 
   mutate(change = streak - before) %>% 
-  arrange(change) %>% 
-  pull(Name)
+  arrange(change)
 
+#Names arranged by OPS change ascending
+ops_order <- ops_change %>% pull(Name)
+
+#Reorder batters_both by ops change for graph
 batters_both <- batters_both %>% 
   mutate(Name = factor(Name, levels = ops_order))
 ```
 
 ## Visualization
 
-The first chart compares each Red Sox hitter's OPS (on-base plus slugging, a standard measure of overall offensive production) before the win streak against their OPS during it. Each player is represented by two dots connected by a line, with the darker dot mapping their OPS during the streak and the lighter dot mapping their OPS before the streak. 
+**Figure 1** compares each Red Sox hitter's OPS (on-base plus slugging, a standard measure of overall offensive production) before the win streak against their OPS during it. Each player is represented by two dots connected by a line, with the darker dot mapping their OPS during the streak and the lighter dot mapping their OPS before the streak. 
 
 ```{r}
 #| label: visualization
@@ -243,7 +247,7 @@ ops_dumbell_plot <- ggplot(batters_both, aes(x = Name, y = OPS)) +
 ops_dumbell_plot
 ```
 
-The second chart is an interactive plot which shows every Red Sox batter's OPS specifically during the win streak, colored by whether they were above or below the league-average OPS of .721. Hover over any point to see which player it represents.
+**Figure 2** is an interactive plot which shows every Red Sox batter's OPS specifically during the win streak, colored by whether they were above or below the league-average OPS of .721. Hover over any point to see which player it represents.
 
 ```{r}
 #---- Interactive OPS comparison chart Plotly ----
@@ -272,7 +276,7 @@ interactive_plot <- ggplotly(ops_plot, tooltip = "text")
 interactive_plot
 ```
 
-The final chart illustrates the improvement of the pitching staff using four standard metrics; ERA, WHIP, strikeouts per nine innings, and walks per nine innings. The graph compares the period before the streak to the period during it using four faceted bar charts. Individual pitcher stats were aggregated into team wide metrics, rather than compared one by one, as most pitchers threw very few innings during the 13 game stretch. 
+**Figure 3** illustrates the improvement of the pitching staff using four standard metrics; ERA, WHIP, strikeouts per nine innings, and walks per nine innings. The graph compares the period before the streak to the period during it using four faceted bar charts. Individual pitcher stats were aggregated into team wide metrics, rather than compared one by one, as most pitchers threw very few innings during the 13 game stretch. 
 
 ```{r}
 #---- Pitching metric comparison chart ----
@@ -294,19 +298,27 @@ pitchers_bar_chart
 
 ## Results
 
+Across nearly every offensive and pitching metric, the Red Sox's dramatic season turnaround is mirrored by substantial statistical improvement. As clearly seen in Figure 1, the offensive performance of the team as a whole skyrocketed during the thirteen-game stretch. Eight of the eleven batters with sufficient at-bats both before and during the streak had a noticeably higher OPS during the streak compared to before it, with the largest improvements coming from Andruw Monasterio (+529) and Tsu Che Cheng (+592). By overall OPS, Wilson Contreres (1.120), Masataka Yoshida (1.117), and Andruw Monasterio (1.162) have been the leading contributors to the Red Sox offensive surge. 
 
+On top of these offensive improvements, the pitching staff has hit their stride as well. As seen in Figure 3, aggregate team pitching stats improved across the board during the win streak: ERA fell from 3.85 to 1.88, WHIP dropped from 1.27 to 0.92, and the staff allowed fewer walks per nine (3.10 vs. 1.96). However, strikeouts per nine did drop marginally from 8.74 to 8.36. Although not included in visualization, the leading contributors in the pitching staff were been Jake Bennett (20.2 IP, 2 ER), Sonny Gray (12.0IP, 2ER), and Payton Tolle (9.2 IP, 1 ER.)
 
-## Conclusion
+My investigation into the influence of roster transactions did not yield any notable results. No contributing players were called up or traded for near the beginning of the streak. Anthony Seigler, Tsu Che Cheng, and Jake Bennett were all added to the roster in mid-June and have made strong positive influences on team results, but their addition came weeks before the streak actually began on July 3rd. 
 
 ## References
 
-Baseball-Reference. (n.d.). *Boston Red Sox statistics and history*. Sports Reference LLC. https://www.baseball-reference.com/teams/BOS/
+The following are sources used beyond class website resources. 
 
-MLB Advanced Media. (n.d.). *MLB Stats API*. Major League Baseball. https://statsapi.mlb.com/
-
-toddrob99. (n.d.). *MLB-StatsAPI Wiki: Endpoints*. GitHub. https://github.com/toddrob99/MLB-StatsAPI/wiki/Endpoints
+toddrob99. *MLB-StatsAPI Wiki: Endpoints*. GitHub. https://github.com/toddrob99/MLB-StatsAPI/wiki/Endpoints
 
 Petti, B. (2024). *baseballr: Acquiring and analyzing baseball data* [R package]. https://billpetti.github.io/baseballr/
+
+Wharton AI & Analytics Initiative. (2025). How to Create Interactive Plots in R – On-Demand Tutorial. YouTube. https://www.youtube.com/watch?v=q93OfLallDw
+
+GeeksforGeeks. (2024, September 12). How to format mouse over labels using ggplotly in R. GeeksforGeeks. https://www.geeksforgeeks.org/r-language/how-to-format-mouse-over-labels-using-ggplotly-in-r/
+
+Ooms, J. (2014). Getting started with JSON and jsonlite. jsonlite package vignette, CRAN. https://cran.r-project.org/web/packages/jsonlite/vignettes/json-aaquickstart.html
+
+Artificial Intelligence was used to help in Initial Scaffolding phase to construct repository and write gitignore. 
 
 
 
