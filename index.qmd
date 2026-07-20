@@ -22,6 +22,7 @@ execute:
 library(tidyverse)
 library(baseballr)
 library(jsonlite)
+library(plotly)
 ```
 
 ## Introduction
@@ -195,7 +196,7 @@ ops_dumbell_plot <- ggplot(batters_both, aes(x = Name, y = OPS)) +
 
 #---- Pitching metric comparison chart ----
 
-# combine all pitchers together and total up their innings/runs/etc by period
+# combine all pitchers together and total up their metrics by period
 team_pitching <- bos_pitchers_compare %>%
   group_by(period) %>%
   summarize(
@@ -219,7 +220,7 @@ team_pitching_long <- team_pitching %>%
 # bar chart comparing overall team pitching stats before vs during the streak
 ggplot(team_pitching_long, aes(x = period, y = value, fill = period)) +
   geom_col(width = 0.5) +
-  facet_wrap(~ stat, scales = "free_y") + # each stat gets its own scale since ERA/WHIP/K9/BB9 are on different ranges
+  facet_wrap(~ stat, scales = "free_y") + # each stat gets its own scale
   scale_fill_manual(values = c(before = "#7FB3D5", streak = "#0C2340")) +
   labs(
     title = "Team pitching improved across the board during the win streak",
@@ -228,8 +229,29 @@ ggplot(team_pitching_long, aes(x = period, y = value, fill = period)) +
   ) +
   theme_minimal(base_size = 12)
 
+#---- Interactive OPS comparison chart Plotly ----
+
+#Add above vs below league average variable for graph coloring
+bos_batters_streak <- bos_batters_streak %>%
+  mutate(ops_group = if_else(OPS > league_avg_ops, "Above league average", "Below league average"))
+
+ops_plot <- ggplot(bos_batters_streak, aes(x = reorder(Name, OPS), y = OPS,
+                    color = ops_group,
+                    text = paste0(Name, "<br>OPS: ", round(OPS, 3)))) +
+  geom_point(size = 4) +
+  geom_hline(yintercept = league_avg_ops, linetype = "dashed", color = "grey40") +
+  scale_color_manual(values = c("Above league average" = "#4CAF50", "Below league average" = "#BD3039")) +
+  labs(
+    title = "Red Sox batters' OPS during the win streak",
+    x = NULL, y = "OPS", color = NULL
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
+
+interactive_plot <- ggplotly(ops_plot, tooltip = "text")
 
 
+interactive_plot
 
 
 
