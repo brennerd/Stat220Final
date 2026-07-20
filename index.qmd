@@ -5,6 +5,7 @@ author: "Dashiell Brenner"
 date: Jul 16, 2026
 format:
   html:
+    embed-resources: true
     toc: true
     toc-location: left
     code-fold: true
