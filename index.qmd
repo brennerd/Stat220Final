@@ -71,7 +71,9 @@ write_csv(streak_pitchers, "data/raw/bos_pitchers_streak_2026.csv")
 
 # ---- Source 2: Official MLB transaction data using API call ----
 
-#All red sox roster changes throughout 2026
+#All Red Sox roster changes throughout 2026
+
+
 url <- paste0(
   "https://statsapi.mlb.com/api/v1/transactions?teamId=111",
   "&startDate=", season_start,
@@ -119,14 +121,14 @@ bos_games <- bos_games |>
 bos_transactions <- bos_transactions %>% 
   mutate(date = as.Date(date)) #date as string to date 
 
-#group transactions by date and summarize
+#group transactions by date and summarize 
 transactions_by_date <- bos_transactions %>% 
   group_by(date) %>% 
   summarize(
     n_transactions = n(),
-    transaction_summary = paste(typeDesc, player_name, sep = ": ", collapse = "; ")
-  )
-
+    transaction_summary = toString(player_name) #vector of player names -> string
+    )
+  
 #join game data and transaction data by date
 bos_games <- bos_games %>% 
   left_join(transactions_by_date, by = c("game_date" = "date")) |>
@@ -145,9 +147,6 @@ bos_batters_compare <- bind_rows(bos_batters_before, bos_batters_streak) %>%
 #binds rows of pitching stats before vs after streak to create comparable data set
 bos_pitchers_compare <- bind_rows(bos_pitchers_before, bos_pitchers_streak) %>% 
   mutate(period = factor(period, levels = c("before", "streak")))
-
-bos_games
-
 ```
 
 ## Visualize
@@ -155,6 +154,84 @@ bos_games
 
 ```{r}
 #| label: visualize-1
+
+#---- OPS dumbbell chart ----
+
+#data set including only players with ABS during and before streak
+batters_both <- bos_batters_compare %>% 
+  group_by(Name) %>% 
+  filter(n_distinct(period) == 2) %>% 
+  ungroup() %>% 
+  filter(!(Name %in% c("Nate Eaton","Anthony Seigler" )))
+
+#order batters by ops for graph
+ops_order <- batters_both %>% 
+  select(Name, period, OPS) %>% 
+  pivot_wider(names_from = period, values_from = OPS) %>% 
+  mutate(change = streak - before) %>% 
+  arrange(change) %>% 
+  pull(Name)
+
+batters_both <- batters_both %>% 
+  mutate(Name = factor(Name, levels = ops_order))
+
+#ops dumbbell plot code
+ops_dumbell_plot <- ggplot(batters_both, aes(x = Name, y = OPS)) +
+  geom_line(aes(group = Name), color = "grey70", linewidth = 0.8) +
+  geom_point(aes(color = period), size = 4) +
+  scale_color_manual(values = c(before = "#7FB3D5", streak = "#0C2340"),
+                      labels = c("Before streak", "During streak")) +
+  labs(
+    title = "Red Sox hitters' OPS jumped across the board during the win streak",
+    subtitle = "Each line connects one player's OPS before vs. during the 13-game winstreak",
+    x = NULL, y = "OPS", color = NULL
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.minor = element_blank()
+  )
+
+
+#---- Pitching metric comparison chart ----
+
+# combine all pitchers together and total up their innings/runs/etc by period
+team_pitching <- bos_pitchers_compare %>%
+  group_by(period) %>%
+  summarize(
+    total_IP = sum(IP), # total innings pitched by the whole staff
+    total_ER = sum(ER), # earned runs allowed
+    total_H  = sum(H),
+    total_BB = sum(BB),
+    total_SO = sum(SO),
+    team_ERA  = 9 * total_ER / total_IP, # team earned run average
+    team_WHIP = (total_H + total_BB) / total_IP, # walks + hits per inning
+    team_K9   = 9 * total_SO / total_IP, # strikeouts per 9 innings
+    team_BB9  = 9 * total_BB / total_IP # walks per 9 innings
+  )
+
+# reshape so each stat can be compared side by side
+team_pitching_long <- team_pitching %>%
+  select(period, team_ERA, team_WHIP, team_K9, team_BB9) %>%
+  pivot_longer(cols = starts_with("team_"), names_to = "stat", values_to = "value") %>%
+  mutate(stat = recode(stat, team_ERA = "ERA", team_WHIP = "WHIP", team_K9 = "K per 9", team_BB9 = "BB per 9"))
+
+# bar chart comparing overall team pitching stats before vs during the streak
+ggplot(team_pitching_long, aes(x = period, y = value, fill = period)) +
+  geom_col(width = 0.5) +
+  facet_wrap(~ stat, scales = "free_y") + # each stat gets its own scale since ERA/WHIP/K9/BB9 are on different ranges
+  scale_fill_manual(values = c(before = "#7FB3D5", streak = "#0C2340")) +
+  labs(
+    title = "Team pitching improved across the board during the win streak",
+    subtitle = "Aggregate Red Sox pitching stats, before vs. during the 12-game streak",
+    x = NULL, y = NULL, fill = NULL
+  ) +
+  theme_minimal(base_size = 12)
+
+
+
+
+
 
 ```
 
