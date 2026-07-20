@@ -27,9 +27,15 @@ library(plotly)
 
 ## Introduction
 
+Baseball is often described as "a game of runs," and perhaps no team in the history of the sport has better encapsulated this saying than the 2026 Boston Red Sox. On July 2nd, with their record reading (37-48) and their playoff odds projected at a bleak 9%, fans across Boston were ready to write off the 2026 season as just another disappointment. And then, seemingly overnight, everything changed. Between July 3rd and July 19th the Red Sox ripped off 13 consecutive wins, a feat which has been accomplished fewer than one-hundred times in MLB history. In the span of about 2-weeks the Red Sox went from a team in the basement of the American League to one of the hottest teams in baseball, with their playoff odds rocketing to above 50%.
+
+A momentum shift this dramatic naturally elicited a variety of questions among baseball analysts. Was this simply a lucky streak, the kind of variance any team can run into over a two-week stretch, or had something substantive changed? Were Red Sox hitters suddenly squaring up the ball with more authority? Had the pitching staff turned a real corner? Which players were most responsible for the dramatic turnaround? This report sets out to answer these questions with data rather than speculation, by comparing Red Sox hitting, pitching metrics from earlier in the season against the period since the win streak began on July 3rd. Along with exploring whether any roster transactions could help explain the shift in the trajectory of the season. 
 
 ## Acquire
 
+To begin my investigation, I acquired data from two distinct sources: Baseball-Reference and the official MLB Stats API. The first source, Baseball-Reference, provided both the Red Sox's full game-by-game results for the 2026 season and player-level batting and pitching statistics split across the two time windows that this report will compare. Baseball-Reference is operated by Sports Reference LLC, which has compiled trusted and organized baseball statistics since 2000. The second source, MLB's official Stats API, provided records of every roster transaction, trades, call-ups, and injured list moves,involving the Red Sox across the 2026 season. The Stats API is maintained directly by Major League Baseball itself. 
+
+Baseball-Reference data was pulled using the baseballr package's bref_team_results(), bref_daily_batter(), and bref_daily_pitcher() functions; two calls each for batters and pitchers (one for before the streak, one for during it.) The MLB Stats API data was acquired by building the request URL myself (with the Red Sox's team ID and a date range) and parsing the JSON response with the fromJSON() function from the jsonlite package.
 
 ```{r}
 #| label: acquire
@@ -44,45 +50,50 @@ streak_start_date <- as.Date("2026-07-03")
 # All Red Sox game outcomes from 2026. One row for date, win/loss, starting pitcher, attendance, etc. 
 
 bos_games <- bref_team_results(Tm = "BOS", year = season_year)
+
 write_csv(bos_games, "data/raw/bos_team_results_2026.csv")
 
 # ---- Source 1b: Baseball-Reference player stats log ----
 
-#In-depth Red-Sox player stats divided by before streak vs after streak.
+#In-depth Red Sox player stats divided by before streak vs. after streak.
 
 #Boston batting stats before streak
 before_batters <- bref_daily_batter(t1 = season_start, t2 = as.character(streak_start_date - 1)) %>% 
   filter(Team == "Boston")
+
 write_csv(before_batters, "data/raw/bos_batters_before_2026.csv")
 
 #Boston batting stats during streak
 streak_batters <- bref_daily_batter(t1 = streak_start_date, t2 = today_date) %>% 
   filter(Team == "Boston")
+
 write_csv(streak_batters, "data/raw/bos_batters_streak_2026.csv")
 
 #Boston pitching stats before streak
 before_pitchers <- bref_daily_pitcher(t1 = season_start, t2 = as.character(streak_start_date - 1)) %>% 
   filter(Team == "Boston")
+
 write_csv(before_pitchers, "data/raw/bos_pitchers_before_2026.csv")
 
 #Boston pitching stats after streak
 streak_pitchers <- bref_daily_pitcher(t1 = as.character(streak_start_date), t2 = today_date) %>% 
   filter(Team == "Boston")
+
 write_csv(streak_pitchers, "data/raw/bos_pitchers_streak_2026.csv")
 
 # ---- Source 2: Official MLB transaction data using API call ----
 
-#All Red Sox roster changes throughout 2026
-
+#All Red Sox roster changes during 2026
 
 url <- paste0(
   "https://statsapi.mlb.com/api/v1/transactions?teamId=111",
   "&startDate=", season_start,
   "&endDate=", today_date
-)
+) #costructs url used for API call using variables defined above
 
-result <- fromJSON(url)
+result <- fromJSON(url) #converts raw json text to data frame in r
 
+#removes data frames from within data frame and selects desired variables (included in Aquire rather than Wrangle so that the data frame could be written back to csv in data/raw)
 bos_transactions <- result$transactions %>% 
   mutate(
     player_name = person$fullName,
@@ -109,7 +120,7 @@ bos_pitchers_before <- read_csv("data/raw/bos_pitchers_before_2026.csv")
 bos_pitchers_streak <- read_csv("data/raw/bos_pitchers_streak_2026.csv")
 
 #clean game data
-bos_games <- bos_games |>
+bos_games <- bos_games %>% 
   mutate(
     Date_clean = str_remove(Date, " \\(\\d\\)$"), # strip doubleheader marker (1)/(2)
     game_date = as.Date(paste(Date_clean, Year), format = "%A, %b %d %Y"), #reformat dates 
@@ -135,17 +146,17 @@ bos_games <- bos_games %>%
   left_join(transactions_by_date, by = c("game_date" = "date")) |>
   mutate(n_transactions = replace_na(n_transactions, 0))
 
-#add a variable to distinguish between during vs before streak
+#add a variable to distinguish between during vs. before streak
 bos_batters_before <- bos_batters_before %>% mutate(period = "before")
 bos_batters_streak <- bos_batters_streak %>% mutate(period = "streak")
 bos_pitchers_before <- bos_pitchers_before %>% mutate(period = "before")
 bos_pitchers_streak <- bos_pitchers_streak %>% mutate(period = "streak")
 
-#binds rows of batting stats before vs after streak to create comparable data set
+#binds rows of batting stats before vs. after streak to create comparable data set
 bos_batters_compare <- bind_rows(bos_batters_before, bos_batters_streak) %>% 
-  mutate(period = factor(period, levels = c("before", "streak"))) #make before vs during streak a factor
+  mutate(period = factor(period, levels = c("before", "streak"))) #make before vs. during streak a factor
 
-#binds rows of pitching stats before vs after streak to create comparable data set
+#binds rows of pitching stats before vs. after streak to create comparable data set
 bos_pitchers_compare <- bind_rows(bos_pitchers_before, bos_pitchers_streak) %>% 
   mutate(period = factor(period, levels = c("before", "streak")))
 ```
@@ -163,7 +174,7 @@ batters_both <- bos_batters_compare %>%
   group_by(Name) %>% 
   filter(n_distinct(period) == 2) %>% 
   ungroup() %>% 
-  filter(!(Name %in% c("Nate Eaton","Anthony Seigler" )))
+  filter(!(Name %in% c("Nate Eaton","Anthony Seigler" ))) #not enough ABs during or before streak
 
 #order batters by ops for graph
 ops_order <- batters_both %>% 
@@ -193,6 +204,7 @@ ops_dumbell_plot <- ggplot(batters_both, aes(x = Name, y = OPS)) +
     panel.grid.minor = element_blank()
   )
 
+ops_dumbell_plot
 
 #---- Pitching metric comparison chart ----
 
@@ -217,8 +229,8 @@ team_pitching_long <- team_pitching %>%
   pivot_longer(cols = starts_with("team_"), names_to = "stat", values_to = "value") %>%
   mutate(stat = recode(stat, team_ERA = "ERA", team_WHIP = "WHIP", team_K9 = "K per 9", team_BB9 = "BB per 9"))
 
-# bar chart comparing overall team pitching stats before vs during the streak
-ggplot(team_pitching_long, aes(x = period, y = value, fill = period)) +
+# bar chart comparing overall team pitching stats before vs. during the streak
+pitchers_bar_chart <- ggplot(team_pitching_long, aes(x = period, y = value, fill = period)) +
   geom_col(width = 0.5) +
   facet_wrap(~ stat, scales = "free_y") + # each stat gets its own scale
   scale_fill_manual(values = c(before = "#7FB3D5", streak = "#0C2340")) +
@@ -229,9 +241,13 @@ ggplot(team_pitching_long, aes(x = period, y = value, fill = period)) +
   ) +
   theme_minimal(base_size = 12)
 
-#---- Interactive OPS comparison chart Plotly ----
+pitchers_bar_chart
 
-#Add above vs below league average variable for graph coloring
+#---- Interactive OPS comparison chart Plotly ----
+ 
+league_avg_ops <- 0.721 #league average ops
+
+#Add above vs. below league average variable for graph coloring
 bos_batters_streak <- bos_batters_streak %>%
   mutate(ops_group = if_else(OPS > league_avg_ops, "Above league average", "Below league average"))
 
@@ -250,7 +266,6 @@ ops_plot <- ggplot(bos_batters_streak, aes(x = reorder(Name, OPS), y = OPS,
 
 interactive_plot <- ggplotly(ops_plot, tooltip = "text")
 
-
 interactive_plot
 
 
@@ -261,4 +276,16 @@ interactive_plot
 
 
 ## Conclusion
+
+## References
+
+Baseball-Reference. (n.d.). *Boston Red Sox statistics and history*. Sports Reference LLC. https://www.baseball-reference.com/teams/BOS/
+
+MLB Advanced Media. (n.d.). *MLB Stats API*. Major League Baseball. https://statsapi.mlb.com/
+
+toddrob99. (n.d.). *MLB-StatsAPI Wiki: Endpoints*. GitHub. https://github.com/toddrob99/MLB-StatsAPI/wiki/Endpoints
+
+Petti, B. (2024). *baseballr: Acquiring and analyzing baseball data* [R package]. https://billpetti.github.io/baseballr/
+
+
 
