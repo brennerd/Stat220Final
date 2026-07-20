@@ -31,14 +31,14 @@ Baseball is often described as "a game of runs," and perhaps no team in the hist
 
 A momentum shift this dramatic naturally elicited a variety of questions among baseball analysts. Was this simply a lucky streak, the kind of variance any team can run into over a two-week stretch, or had something substantive changed? Were Red Sox hitters suddenly squaring up the ball with more authority? Had the pitching staff turned a real corner? Which players were most responsible for the dramatic turnaround? This report sets out to answer these questions with data rather than speculation, by comparing Red Sox hitting, pitching metrics from earlier in the season against the period since the win streak began on July 3rd. Along with exploring whether any roster transactions could help explain the shift in the trajectory of the season. 
 
-## Acquire
+## Acquisition
 
 To begin my investigation, I acquired data from two distinct sources: Baseball-Reference and the official MLB Stats API. The first source, Baseball-Reference, provided both the Red Sox's full game-by-game results for the 2026 season and player-level batting and pitching statistics split across the two time windows that this report will compare. Baseball-Reference is operated by Sports Reference LLC, which has compiled trusted and organized baseball statistics since 2000. The second source, MLB's official Stats API, provided records of every roster transaction, trades, call-ups, and injured list moves,involving the Red Sox across the 2026 season. The Stats API is maintained directly by Major League Baseball itself. 
 
 Baseball-Reference data was pulled using the baseballr package's bref_team_results(), bref_daily_batter(), and bref_daily_pitcher() functions; two calls each for batters and pitchers (one for before the streak, one for during it.) The MLB Stats API data was acquired by building the request URL myself (with the Red Sox's team ID and a date range) and parsing the JSON response with the fromJSON() function from the jsonlite package.
 
 ```{r}
-#| label: acquire
+#| label: acquisition
 
 season_year  <- 2026
 season_start <- "2026-03-01"
@@ -105,8 +105,23 @@ bos_transactions <- result$transactions %>%
 write_csv(bos_transactions, "data/raw/bos_transactions_2026.csv")
 ```
 
-## Wrangle
+## Manipulation
 
+A significant amount of tidying and manipulating was required before the data could be analyzed and visualized.  
+Tidying and manipulation steps:
+
+- Parsed Baseball-Reference's messy date text (no year, doubleheader markers (1)/(2) ) into a proper Date column
+- Converted the win/loss result column into a clean logical variable
+- Converted home/away and day/night single-letter codes into labeled factors
+- Converted the transactions data's date column into a proper Date type
+- Converted nested player and team data frames within the transactions data into plain text columns 
+- Grouped transactions by date and summarized them into one count/description per day
+- Left-joined the summarized transactions onto the game log by date
+- Combined before- and during-streak player stats by binding rows, tagging each half with a period label
+- Combined all pitchers together and totaled up their metrics by period
+- Reshaped pitching stats so each metric could be compared side by side
+- Created filtered data set with only batters with sufficient at-bats in both periods
+- Ordered batters by their change in OPS from before to during the streak for graphing 
 
 ```{r}
 #| label: wrangle
@@ -159,56 +174,8 @@ bos_batters_compare <- bind_rows(bos_batters_before, bos_batters_streak) %>%
 #binds rows of pitching stats before vs. after streak to create comparable data set
 bos_pitchers_compare <- bind_rows(bos_pitchers_before, bos_pitchers_streak) %>% 
   mutate(period = factor(period, levels = c("before", "streak")))
-```
 
-## Visualize
-
-
-```{r}
-#| label: visualize-1
-
-#---- OPS dumbbell chart ----
-
-#data set including only players with ABS during and before streak
-batters_both <- bos_batters_compare %>% 
-  group_by(Name) %>% 
-  filter(n_distinct(period) == 2) %>% 
-  ungroup() %>% 
-  filter(!(Name %in% c("Nate Eaton","Anthony Seigler" ))) #not enough ABs during or before streak
-
-#order batters by ops for graph
-ops_order <- batters_both %>% 
-  select(Name, period, OPS) %>% 
-  pivot_wider(names_from = period, values_from = OPS) %>% 
-  mutate(change = streak - before) %>% 
-  arrange(change) %>% 
-  pull(Name)
-
-batters_both <- batters_both %>% 
-  mutate(Name = factor(Name, levels = ops_order))
-
-#ops dumbbell plot code
-ops_dumbell_plot <- ggplot(batters_both, aes(x = Name, y = OPS)) +
-  geom_line(aes(group = Name), color = "grey70", linewidth = 0.8) +
-  geom_point(aes(color = period), size = 4) +
-  scale_color_manual(values = c(before = "#7FB3D5", streak = "#0C2340"),
-                      labels = c("Before streak", "During streak")) +
-  labs(
-    title = "Red Sox hitters' OPS jumped across the board during the win streak",
-    subtitle = "Each line connects one player's OPS before vs. during the 13-game winstreak",
-    x = NULL, y = "OPS", color = NULL
-  ) +
-  theme_minimal(base_size = 12) +
-  theme(
-    axis.text.x = element_text(angle = 45, hjust = 1),
-    panel.grid.minor = element_blank()
-  )
-
-ops_dumbell_plot
-
-#---- Pitching metric comparison chart ----
-
-# combine all pitchers together and total up their metrics by period
+#combine all pitchers together and total up their metrics by period
 team_pitching <- bos_pitchers_compare %>%
   group_by(period) %>%
   summarize(
@@ -223,26 +190,62 @@ team_pitching <- bos_pitchers_compare %>%
     team_BB9  = 9 * total_BB / total_IP # walks per 9 innings
   )
 
-# reshape so each stat can be compared side by side
+#reshape so each stat can be compared side by side
 team_pitching_long <- team_pitching %>%
   select(period, team_ERA, team_WHIP, team_K9, team_BB9) %>%
   pivot_longer(cols = starts_with("team_"), names_to = "stat", values_to = "value") %>%
   mutate(stat = recode(stat, team_ERA = "ERA", team_WHIP = "WHIP", team_K9 = "K per 9", team_BB9 = "BB per 9"))
 
-# bar chart comparing overall team pitching stats before vs. during the streak
-pitchers_bar_chart <- ggplot(team_pitching_long, aes(x = period, y = value, fill = period)) +
-  geom_col(width = 0.5) +
-  facet_wrap(~ stat, scales = "free_y") + # each stat gets its own scale
-  scale_fill_manual(values = c(before = "#7FB3D5", streak = "#0C2340")) +
+#data set including only players with ABS during and before streak
+batters_both <- bos_batters_compare %>% 
+  group_by(Name) %>% 
+  filter(n_distinct(period) == 2) %>% 
+  ungroup() %>% 
+  filter(!(Name %in% c("Nate Eaton","Anthony Seigler", "Romy Gonzalez" ))) #not enough ABs during or before streak
+
+ops_order <- batters_both %>% 
+  select(Name, period, OPS) %>% 
+  pivot_wider(names_from = period, values_from = OPS) %>% 
+  mutate(change = streak - before) %>% 
+  arrange(change) %>% 
+  pull(Name)
+
+batters_both <- batters_both %>% 
+  mutate(Name = factor(Name, levels = ops_order))
+```
+
+## Visualization
+
+The first chart compares each Red Sox hitter's OPS (on-base plus slugging, a standard measure of overall offensive production) before the win streak against their OPS during it. Each player is represented by two dots connected by a line, with the darker dot mapping their OPS during the streak and the lighter dot mapping their OPS before the streak. 
+
+```{r}
+#| label: visualization
+
+#---- OPS dumbbell chart ----
+
+#dumbell plot comparing pre-streak ops to mid-streak ops for each batter with sufficient ABS
+ops_dumbell_plot <- ggplot(batters_both, aes(x = Name, y = OPS)) +
+  geom_line(aes(group = Name), color = "grey70", linewidth = 0.8) +
+  geom_point(aes(color = period), size = 4) +
+  scale_color_manual(values = c(before = "#7FB3D5", streak = "#0C2340"),
+                      labels = c("Before streak", "During streak")) +
   labs(
-    title = "Team pitching improved across the board during the win streak",
-    subtitle = "Aggregate Red Sox pitching stats, before vs. during the 12-game streak",
-    x = NULL, y = NULL, fill = NULL
+    title = "Red Sox hitters' OPS improved across the board during the win streak",
+    subtitle = "Each line connects one player's OPS before vs. during the 13-game winstreak",
+    x = NULL, y = "OPS", color = NULL
   ) +
-  theme_minimal(base_size = 12)
+  theme_minimal(base_size = 12) +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.minor = element_blank()
+  )
 
-pitchers_bar_chart
+ops_dumbell_plot
+```
 
+The second chart is an interactive plot which shows every Red Sox batter's OPS specifically during the win streak, colored by whether they were above or below the league-average OPS of .721. Hover over any point to see which player it represents.
+
+```{r}
 #---- Interactive OPS comparison chart Plotly ----
  
 league_avg_ops <- 0.721 #league average ops
@@ -267,12 +270,30 @@ ops_plot <- ggplot(bos_batters_streak, aes(x = reorder(Name, OPS), y = OPS,
 interactive_plot <- ggplotly(ops_plot, tooltip = "text")
 
 interactive_plot
-
-
-
 ```
 
-## Communicate
+The final chart illustrates the improvement of the pitching staff using four standard metrics; ERA, WHIP, strikeouts per nine innings, and walks per nine innings. The graph compares the period before the streak to the period during it using four faceted bar charts. Individual pitcher stats were aggregated into team wide metrics, rather than compared one by one, as most pitchers threw very few innings during the 13 game stretch. 
+
+```{r}
+#---- Pitching metric comparison chart ----
+
+# bar chart comparing overall team pitching stats before vs. during the streak
+pitchers_bar_chart <- ggplot(team_pitching_long, aes(x = period, y = value, fill = period)) +
+  geom_col(width = 0.5) +
+  facet_wrap(~ stat, scales = "free_y") + # each stat gets its own scale
+  scale_fill_manual(values = c(before = "#7FB3D5", streak = "#0C2340")) +
+  labs(
+    title = "Team pitching improved across the board during the win streak",
+    subtitle = "Aggregate Red Sox pitching stats, before vs. during the 12-game streak",
+    x = NULL, y = NULL, fill = NULL
+  ) +
+  theme_minimal(base_size = 12)
+
+pitchers_bar_chart
+```
+
+## Results
+
 
 
 ## Conclusion
